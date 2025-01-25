@@ -258,7 +258,7 @@ footer::before {
     display: in;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 678px) {
     #header-cnt {}
 
     .title-cnt {
@@ -362,7 +362,12 @@ footer::before {
         /* Smaller font size */
     }
     .goal-cnt{
-       font-size: 0.5rem;
+        width: 80%;
+       
+    }
+    .goal-cnt h3{
+        font-size: 1.2rem;
+        width: 100%;
     }
 
     .days {
@@ -405,11 +410,11 @@ footer::before {
     #right {}
 
     #middle span {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #left span {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
 
     }
 
@@ -425,7 +430,7 @@ footer::before {
     footer::before {
         content: '';
         position: absolute;
-        top: 61%;
+        top: 78%;
         left: 37%;
         width: 2px;
         height: 10%;
@@ -433,7 +438,8 @@ footer::before {
     }
 
     .line {
-        top: 25%;
+        top: 35%;
 
     }
 }
+
