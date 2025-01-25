@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  .tracker-card {
+    background-color: #8b0000;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .tracker-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .goal-status {
+    margin: 5px 0 20px;
+    font-size: 0.9rem;
+    color: #f2f2f2;
+  }
+  
+  .day-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+  }
+  
+  .day {
+    text-align: center;
+  }
+  
+  .day p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #f2f2f2;
+  }
+  
+  .calories {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .highlight {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .total, .average {
+    text-align: center;
+  }
+  
+  .total span, .average span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  

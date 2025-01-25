@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    /* border: white; */
+    font-family: sans-serif;
+}
+
+:root {
+    --bg-color: rgb(120, 19, 16);
+    --secondary-color: rgb(246, 92, 76);
+    --font-color: rgb(150, 100, 93);
+}
+
+body {
+    background-color: var(--bg-color);
+
+}
+
+#header-cnt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-cnt {
+    width: 10%;
+    /* border: 2px solid black; */
+}
+
+.left-cnt img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.middle-cnt {
+    width: 72%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid gray; */
+    width: 60%;
+    height: 4rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.title-cnt h2 {
+    font-family: sans-serif;
+    text-shadow: 2px 3px 3px rgb(197, 69, 41);
+    color: rgb(209, 104, 98);
+
+}
+
+.goal-cnt h3 {
+    color: var(--font-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.percent-cnt {
+    color: var(--font-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.title-cnt h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(214, 110, 106);
+}
+
+.left-cnt {
+    width: 10%;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: -4rem;
+}
+
+.left-cnt i {
+    font-size: 2rem;
+}
+
+.line {
+    margin: auto;
+    content: '';
+    position: absolute;
+    display: inline;
+    top: 28%;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+
+    background-color: rgb(153, 43, 39);
+    margin-top: 1rem;
+
+
+
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    /* border: 2px solid; */
+}
+
+.day {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid; */
+}
+
+.dayName {
+    width: 50%;
+    /* color: rgb(188, 36, 36); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    height: 1.8rem;
+    font-weight: 600;
+    color: rgb(174, 80, 80);
+}
+
+
+.dayName:hover {
+    color: white;
+    background-color: rgb(119, 77, 71);
+}
+
+.calories-img {
+    width: 80%;
+    height: 7rem;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(185, 27, 32);
+ 
+    
+}
+
+.calories-img:hover {
+    filter: invert(100%);
+    padding: 10px;
+    background-color: black;
+  
+}
+
+.calories-img img {
+    width: inherit;
+    height: inherit;
+    /* color: white; */
+}
+
+.NumberOfcal {
+    color: var(--secondary-color);
+    margin-top: 0.6rem;
+}
+
+footer {
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 2px solid; */
+    gap: 2%;
+    background-color: var(--secondary-color);
+    border-radius: 10rem;
+    margin-top: 4rem;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 69%;
+    left: 25%;
+    width: 2px;
+    height: 16%;
+    background-color: #FF7F00;
+}
+
+#left {
+    width: 15%;
+    height: 16vh;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#left span {
+    font-size: 2rem;
+}
+
+#middle {
+    width: 60%;
+    height: 16vh;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#right {
+    width: 15%;
+    height: 16vh;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right img {
+    border: 10px dashed rgb(241, 235, 235);
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+
+#middle span {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+#middle h4 {
+    display: in;
+}
+
+@media (max-width: 600px) {
+    #header-cnt {}
+
+    .title-cnt {
+        width: 90%;
+        /* Reduce width for better fit */
+        font-size: 1.5rem;
+        /* Adjust font size */
+    }
+
+    .days {
+        width: 100%;
+    }
+
+    .day {
+        width: 12%;
+        /* Make days responsive */
+        margin: 1rem 0;
+        /* Add spacing */
+    }
+
+    .dayName {
+        width: 80%;
+        /* Adjust day name width */
+        font-size: 1rem;
+        /* Reduce font size */
+    }
+
+    .calories-img {
+        width: 3.5rem;
+        /* Smaller circular image */
+        height: 4rem;
+        /* Adjust height */
+    }
+
+    .calories-img img {
+        width: inherit;
+        height: inherit;
+    }
+
+    footer {
+        height: 15vh;
+    }
+
+    #left {
+        width: 25%;
+        height: 5rem;
+
+    }
+
+    #middle {
+        width: 40%;
+        height: 5rem;
+    }
+
+    #right {
+        width: 15%;
+        height: 5rem;
+    }
+
+    #right img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 58%;
+        left: 37%;
+        width: 2px;
+        height: 10%;
+        background-color: #FF7F00;
+    }
+}
+
+
+@media (max-width: 400px) {
+    #header-cnt {
+        width: 100%;
+    }
+
+    .title-cnt {
+        width: 95%;
+        /* Reduce width for better fit */
+        font-size: 1.2rem;
+        /* Smaller font size */
+    }
+
+    .days {
+        width: 100%;
+    }
+
+    .day {
+        width: 20%;
+   
+        margin: 0.5rem 0;
+        /* Reduce vertical spacing */
+    }
+
+    .dayName {
+        width: 70%;
+        /* Reduce day name width */
+        font-size: 0.9rem;
+  
+    }
+
+    .calories-img {
+        width: 3rem;
+        /* Smaller circular image */
+        height: 3.5rem;
+        /* Adjust height */
+    }
+
+    .calories-img img {
+        width: inherit;
+        height: inherit;
+    }
+
+    footer {
+        width: 80%;
+        height: 6rem;
+    }
+
+    #left,
+    #middle,
+    #right {}
+
+    #middle span {
+        font-size: 2rem;
+    }
+
+    #left span {
+        font-size: 1.4rem;
+
+    }
+
+    #left h4 {}
+
+    #right img {
+        width: 2.5rem;
+  
+        height: 2.5rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 57%;
+        left: 37%;
+        width: 2px;
+        height: 10%;
+        background-color: #FF7F00;
+    }
+
+    .line {
+        top: 25%;
+
+    }
+}
