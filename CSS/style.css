@@ -7,6 +7,7 @@
     color: white;
     /* border: white; */
     font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -95,6 +96,7 @@ body {
 
 .left-cnt i {
     font-size: 2rem;
+    color: rgb(214, 82, 82);
 }
 
 .line {
@@ -159,12 +161,14 @@ body {
     align-items: center;
     border-radius: 50%;
     background-color: rgb(185, 27, 32);
+    object-fit: cover;
+    filter: brightness(0.8);
  
     
 }
 
 .calories-img:hover {
-    filter: invert(100%);
+    filter: brightness(0) invert(1);
     padding: 10px;
     background-color: black;
   
@@ -198,7 +202,7 @@ footer {
 footer::before {
     content: '';
     position: absolute;
-    top: 69%;
+    top: 71%;
     left: 25%;
     width: 2px;
     height: 16%;
@@ -322,12 +326,27 @@ footer::before {
     footer::before {
         content: '';
         position: absolute;
-        top: 58%;
+        top: 80%;
         left: 37%;
         width: 2px;
         height: 10%;
         background-color: #FF7F00;
     }
+    #right img {
+        width: 2.5rem;
+  
+        height: 2.5rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+    #middle span {
+        font-size: 2rem;
+    }
+
+    #left span {
+        font-size: 1.4rem;
+
+    }
+
 }
 
 
@@ -341,6 +360,9 @@ footer::before {
         /* Reduce width for better fit */
         font-size: 1.2rem;
         /* Smaller font size */
+    }
+    .goal-cnt{
+       font-size: 0.5rem;
     }
 
     .days {
@@ -374,7 +396,7 @@ footer::before {
     }
 
     footer {
-        width: 80%;
+        width: 85%;
         height: 6rem;
     }
 
@@ -403,7 +425,7 @@ footer::before {
     footer::before {
         content: '';
         position: absolute;
-        top: 57%;
+        top: 61%;
         left: 37%;
         width: 2px;
         height: 10%;
