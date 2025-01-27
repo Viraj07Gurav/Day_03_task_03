@@ -11,13 +11,21 @@
 }
 
 :root {
-    --bg-color: rgb(120, 19, 16);
-    --secondary-color: rgb(246, 92, 76);
+    --bg-color: rgb(81, 3, 1);
+    --secondary-color:rgb(198,73,61);
     --font-color: rgb(150, 100, 93);
 }
+body{
+    background-color: black;
+}
 
-body {
+main {
     background-color: var(--bg-color);
+    width: 60%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 10rem;
+    border-radius: 2rem;
 
 }
 
@@ -26,16 +34,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+ 
 }
 
 .left-cnt {
     width: 10%;
     /* border: 2px solid black; */
+   
 }
 
 .left-cnt img {
     height: 3rem;
     width: 3rem;
+    padding: 0.5rem;
 }
 
 .middle-cnt {
@@ -45,6 +56,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid rgb(149, 35, 40);
+    padding-bottom: 2rem;
 
 }
 
@@ -64,9 +77,14 @@ body {
     font-family: sans-serif;
     text-shadow: 2px 3px 3px rgb(197, 69, 41);
     color: rgb(209, 104, 98);
+    animation: burn 3s infinite;
 
 }
-
+.goal-cnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .goal-cnt h3 {
     color: var(--font-color);
     font-size: 1.6rem;
@@ -97,6 +115,7 @@ body {
 .left-cnt i {
     font-size: 2rem;
     color: rgb(214, 82, 82);
+    padding: 0.5rem;
 }
 
 .line {
@@ -105,11 +124,11 @@ body {
     position: absolute;
     display: inline;
     top: 28%;
-    left: 5%;
-    width: 90%;
+    left: 25%;
+    width: 50%;
     height: 3px;
 
-    background-color: rgb(153, 43, 39);
+    /* background-color: rgb(153, 43, 39); */
     margin-top: 1rem;
 
 
@@ -121,9 +140,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
     /* border: 2px solid; */
+ 
 }
+
 
 .day {
     width: 10%;
@@ -132,6 +153,7 @@ body {
     align-items: center;
     /* border: 2px solid; */
 }
+
 
 .dayName {
     width: 50%;
@@ -153,26 +175,62 @@ body {
 }
 
 .calories-img {
-    width: 80%;
-    height: 7rem;
-    border: 2px solid;
+    width: 5rem;
+    height: 5rem;
+    border:none;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: rgb(185, 27, 32);
+    background-color: var(--secondary-color);
     object-fit: cover;
+    padding: 0.8rem;
     filter: brightness(0.8);
  
     
 }
+.calories-img :hover{
+    transform: scale(1.08);
+}
 
-.calories-img:hover {
+/* animation */
+@keyframes burn {
+    0% {
+       opacity: 0.5;
+      
+        }
+    25% {
+     opacity:1;
+    }
+    50% {
+       opacity: 0.5;
+    }
+    75% {
+        /* transform: translateX(-1px); */
+       opacity: 1;
+    }
+    100% {
+        /* transform: translateX(0); */
+       opacity: 0.5;
+    }
+}
+.gff{
+transform: rotate(222deg);
+}
+#friday{    
+   border: 4px solid; 
+   border-top-color: rgb(255, 135, 81);
+   border-right-color:rgb(183, 36, 36);
+   border-left-color: rgb(255, 135, 81);
+   border-bottom-color:rgb(183, 36, 36);
+   transform: rotate(138deg);
+}
+/* .calories-img:hover {
     filter: brightness(0) invert(1);
     padding: 10px;
     background-color: black;
   
-}
+} */
 
 .calories-img img {
     width: inherit;
@@ -194,29 +252,29 @@ footer {
     margin: auto;
     /* border: 2px solid; */
     gap: 2%;
-    background-color: var(--secondary-color);
+    background-color:var(--secondary-color);
     border-radius: 10rem;
     margin-top: 4rem;
 }
 
-footer::before {
+/* footer::before {
     content: '';
     position: absolute;
     top: 71%;
     left: 25%;
     width: 2px;
     height: 16%;
-    background-color: #FF7F00;
-}
+} */
 
 #left {
-    width: 15%;
+    width: 20%;
     height: 16vh;
     /* border: 2px solid; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    border-right: 2px solid rgb(219, 149, 64);
 }
 
 #left span {
@@ -224,7 +282,7 @@ footer::before {
 }
 
 #middle {
-    width: 60%;
+    width: 40%;
     height: 16vh;
     /* border: 2px solid; */
     display: flex;
@@ -245,8 +303,9 @@ footer::before {
 #right img {
     border: 10px dashed rgb(241, 235, 235);
     border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: 0.2rem;
 }
 
 #middle span {
@@ -257,9 +316,388 @@ footer::before {
 #middle h4 {
     display: in;
 }
+@media (max-width:320px) {
+    main {
+        background-color: var(--bg-color);
+        width: 100%;
+        margin: auto;
+        height: auto;
+        padding-bottom: 10rem;
+    
+    }
+    #header-cnt {
+        width: 100%;
+    }
 
-@media (max-width: 678px) {
+    .title-cnt {
+        width: 95%;
+        /* Reduce width for better fit */
+        font-size: 1rem;
+        /* Smaller font size */
+    }
+    .goal-cnt{
+        width: 80%;
+       
+    }
+    .goal-cnt h3{
+        font-size: 0.9rem;
+        width: 100%;
+    }
+.middle-cnt .percent-cnt{
+    font-size: 0.8rem;
+}
+    .days {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .day {
+        width: 15%;
+   
+        margin: 0.5rem 0;
+        /* Reduce vertical spacing */
+    }
+
+    .dayName {
+        width: 70%;
+        /* Reduce day name width */
+        font-size: 0.6rem;
+  
+    }
+
+    .calories-img {
+        width: 2.2rem;
+        /* Smaller circular image */
+        height: 2.2rem;
+        /* Adjust height */
+    }
+
+    .calories-img img {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.2rem;
+    }
+    .NumberOfcal{
+        font-size: 0.5rem;
+    }
+
+    footer {
+        width: 85%;
+        height: 6rem;
+    }
+
+    #left{
+        width: 25%;
+        height: 4rem
+    }
+    #left p{
+        font-size: 0.8rem;
+    }
+    #middle{
+        width: 30%;
+        margin-left: 10px;
+        
+    }
+    #right {}
+
+    #middle span {
+        font-size: 1rem;
+        
+    }
+
+    #left span {
+        font-size: 0.8rem;
+
+    }
+    #left h4,#middle h4 {
+        font-size: 0.6rem;
+    }
+
+    #left h4 {}
+
+    #right img {
+        width: 2.5rem;
+  
+        height: 2.5rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 72%;
+        left: 34%;
+        width: 1.5px;
+        height: 10%;
+        /* background-color: #FF7F00; */
+    }
+
+    .line {
+        top: 35%;
+
+    }
+    
+}
+
+
+
+
+@media only screen and (max-width:375px ) and (min-width:320px) {
+    main {
+        background-color: var(--bg-color);
+        width: 100%;
+        margin: auto;
+        height: auto;
+        padding-bottom: 10rem;
+    
+    }
+      #header-cnt {
+        width: 100%;
+    }
+
+    .title-cnt {
+        width: 95%;
+        /* Reduce width for better fit */
+        font-size: 1.2rem;
+        /* Smaller font size */
+    }
+    .goal-cnt{
+        width: 80%;
+       
+    }
+    .goal-cnt h3{
+        font-size: 1.05rem;
+        width: 100%;
+    }
+    .middle-cnt .percent-cnt{
+        font-size: 1rem;
+    }
+
+    .days {
+        width: 100%;
+        padding:0.8rem;
+    }
+
+    .day {
+        width:2rem;
+   
+        margin: 0.5rem 0;
+        /* Reduce vertical spacing */
+    }
+
+    .dayName {
+        width: 70%;
+        /* Reduce day name width */
+        font-size: 0.9rem;
+  
+    }
+
+    .calories-img {
+        width: 2.5rem;
+        /* Smaller circular image */
+        height: 2.5rem;
+        /* Adjust height */
+    }
+
+    .calories-img img {
+        width: 2.2;
+        height: 2.2;
+        padding: 0.1rem;
+    }
+    .NumberOfcal{
+        font-size: 0.9rem;
+    }
+
+
+    footer {
+        width: 85%;
+        height: 6rem;
+    }
+
+    #left{
+        width: 25%;
+        height: 4rem;
+    }
+    #middle{
+        width: 30%;
+        margin-left: 10px;
+        /* margin-top: -1rem; */
+    }
+    #right {}
+
+    #middle span {
+        font-size: 1rem;
+        
+    }
+
+    #left span {
+        font-size: 0.8rem;
+
+    }
+    #left p{
+        font-size: 0.5rem;
+    }
+    #left h4,#middle h4 {
+        font-size: 0.6rem;
+    }
+
+    #left h4 {}
+
+    #right img {
+        width: 2.5rem;
+  
+        height: 2.5rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 74%;
+        left: 33%;
+        width: 2px;
+        height: 10%;
+        /* background-color: #FF7F00; */
+    }
+
+    .line {
+        top: 35%;
+
+    }
+}
+@media only screen and (max-width: 425px) and (min-width: 375px) {
+    main {
+        background-color: var(--bg-color);
+        width: 100%;
+        margin: auto;
+        height: auto;
+        padding-bottom: 10rem;
+    
+    }
+    #header-cnt {
+        width: 100%;
+    }
+
+    .title-cnt {
+        width: 95%;
+        /* Reduce width for better fit */
+        font-size: 1.2rem;
+        /* Smaller font size */
+    }
+    .goal-cnt{
+        width: 80%;
+       
+    }
+    .goal-cnt h3{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    .middle-cnt .percent-cnt{
+        font-size: 1.1rem;
+    }
+
+    .days {
+        width: 100%;
+    }
+
+    .day {
+        width: 15%;
+   
+        margin: 0.5rem 0;
+        /* Reduce vertical spacing */
+    }
+
+    .dayName {
+        width: 70%;
+        /* Reduce day name width */
+        font-size: 0.9rem;
+  
+    }
+
+    .calories-img {
+        width: 3rem;
+        /* Smaller circular image */
+        height: 3rem;
+        /* Adjust height */
+    }
+
+    .calories-img img {
+        width: 2.5rem;
+        height:2.5rem;
+
+    }
+    .NumberOfcal{
+        font-size: 0.5rem;
+    }
+
+    footer {
+        width: 85%;
+        height: 6rem;
+    }
+
+    #left{
+        width: 22%;
+        height: 5rem;
+    }
+    #left p{
+        font-size: 0.8rem;
+    }
+    
+    #middle{
+        width: 35%;
+        margin-left: 10px;
+       /* / margin-top: -1rem; */
+    }
+    #right {}
+
+    #middle span {
+        font-size: 1.3rem;
+        
+    }
+
+    #left span {
+        font-size: 1rem;
+
+    }
+    #left h4,#middle h4 {
+        font-size: 0.8rem;
+    }
+
+    #left h4 {}
+
+    #right img {
+        width: 2.5rem;
+  
+        height: 2.5rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 74%;
+        left: 33%;
+        width: 2px;
+        height: 10%;
+        /* background-color: #FF7F00; */
+    }
+
+    .line {
+        top: 35%;
+
+    }
+}
+
+@media only screen and (max-width: 678px) and (min-width: 425px) {
     #header-cnt {}
+    main {
+        background-color: var(--bg-color);
+        width: 100%;
+        margin: auto;
+        height: auto;
+        padding-bottom: 10rem;
+    
+    }
 
     .title-cnt {
         width: 90%;
@@ -270,6 +708,7 @@ footer::before {
 
     .days {
         width: 100%;
+        padding: 0.8rem;
     }
 
     .day {
@@ -287,15 +726,15 @@ footer::before {
     }
 
     .calories-img {
-        width: 3.5rem;
+        width: 4rem;
         /* Smaller circular image */
         height: 4rem;
         /* Adjust height */
     }
 
     .calories-img img {
-        width: inherit;
-        height: inherit;
+        width: 3rem;
+        height: 3rem;
     }
 
     footer {
@@ -330,16 +769,16 @@ footer::before {
         left: 37%;
         width: 2px;
         height: 10%;
-        background-color: #FF7F00;
+        /* background-color: #FF7F00; */
     }
     #right img {
-        width: 2.5rem;
+        width: 3rem;
   
-        height: 2.5rem;
+        height: 3rem;
         border: 5px dashed rgb(241, 235, 235);
     }
     #middle span {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     #left span {
@@ -348,67 +787,25 @@ footer::before {
     }
 
 }
-
-
-@media (max-width: 400px) {
-    #header-cnt {
+@media only screen and (max-width: 768px) and (min-width: 678px)
+{
+    main {
+        background-color: var(--bg-color);
         width: 100%;
+        margin: auto;
+        height: auto;
+        padding-bottom: 10rem;
+    
     }
-
-    .title-cnt {
-        width: 95%;
-        /* Reduce width for better fit */
-        font-size: 1.2rem;
-        /* Smaller font size */
+      footer::before {
+        content: '';
+        position: absolute;
+        top: 73%;
+        left: 25%;
+        width: 2px;
+        height: 15%;
+        /* background-color: #FF7F00; */
     }
-    .goal-cnt{
-        width: 80%;
-       
-    }
-    .goal-cnt h3{
-        font-size: 1.2rem;
-        width: 100%;
-    }
-
-    .days {
-        width: 100%;
-    }
-
-    .day {
-        width: 20%;
-   
-        margin: 0.5rem 0;
-        /* Reduce vertical spacing */
-    }
-
-    .dayName {
-        width: 70%;
-        /* Reduce day name width */
-        font-size: 0.9rem;
-  
-    }
-
-    .calories-img {
-        width: 3rem;
-        /* Smaller circular image */
-        height: 3.5rem;
-        /* Adjust height */
-    }
-
-    .calories-img img {
-        width: inherit;
-        height: inherit;
-    }
-
-    footer {
-        width: 85%;
-        height: 6rem;
-    }
-
-    #left,
-    #middle,
-    #right {}
-
     #middle span {
         font-size: 1.5rem;
     }
@@ -417,29 +814,84 @@ footer::before {
         font-size: 1.1rem;
 
     }
-
-    #left h4 {}
-
-    #right img {
-        width: 2.5rem;
-  
-        height: 2.5rem;
-        border: 5px dashed rgb(241, 235, 235);
+    .calories-img {
+        width: 3.5rem;
+        /* Smaller circular image */
+        height: 3.5rem;
+        /* Adjust height */
     }
 
+    .calories-img img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    
+    #right img {
+        width: 4rem;
+  
+        height: 4rem;
+        border: 5px dashed rgb(241, 235, 235);
+    }
+}
+@media only screen and (max-width:1024px) and (min-width:768px)
+ {
+    .calories-img {
+        width: 4rem;
+        /* Smaller circular image */
+        height: 4rem;
+        /* Adjust height */
+    }
+    .calories-img img{
+        padding: 0.4rem;
+    }
+    .title-cnt h2{
+        font-size: 2rem;
+    }
+    .days{
+        padding: 1rem;
+    }
+    #middle{
+      width: 40%;
+    }
+    #middle span {
+        font-size: 1.5rem;
+       
+    }
+    #middle p{
+        margin-top: -1rem;
+    }
+
+    #left span {
+        font-size: 1.1rem;
+
+    }
+    #left p{
+      padding-right: 0.5rem;
+    }
+    #right img {
+        border: 5px dashed rgb(241, 235, 235);
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+    }
     footer::before {
         content: '';
         position: absolute;
-        top: 78%;
-        left: 37%;
+        top: 74%;
+        left: 36%;
         width: 2px;
-        height: 10%;
-        background-color: #FF7F00;
+        height: 15%;
+        /* background-color: #FF7F00; */
     }
-
     .line {
-        top: 35%;
+        top: 30%;
 
     }
 }
-
+@media only screen and (max-width:1440px) and (min-width:1025px){
+    .calories-img{
+        width: 4rem;
+        height: 4rem;
+    }
+}

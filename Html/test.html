@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Image to Black</title>
-    <style>
-        .hover-image {
-            width: 100px; /* Adjust the size of the image */
-            height: auto; /* Maintain aspect ratio */
-            filter: grayscale(50%); /* Makes the image black and white */
-            background-color: rgb(220, 39, 39); /* Set background color to black */
-            transition: filter 0.3s ease, background-color 0.3s ease; /* Smooth transition for both filter and background-color */
-        }
-
-        .hover-image:hover {
-            filter: grayscale(5%) invert(-0.4); /* Changes the image to white on hover */
-            background-color: white; /* Changes background to white on hover */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Half Border Filled</title>
+  <style>
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: conic-gradient(#4CAF50 50%, transparent 50%);
+      border: 10px solid transparent;
+    }
+  </style>
 </head>
 <body>
-    <img class="hover-image" src="../Assests/fire.png" alt="Fire Icon">
+  <div class="circle"></div>
 </body>
 </html>
